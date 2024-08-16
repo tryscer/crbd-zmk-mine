@@ -24,7 +24,7 @@
         };
 
         macro_settings {
-            bindings = <&tog 3>;
+            bindings = <&mo 3>;
             key-positions = <39 38>;
         };
     };
