@@ -13,9 +13,14 @@
     combos {
         compatible = "zmk,combos";
 
-        combo-settings {
-            bindings = <&tog 3>;
-            key-positions = <39 38>;
+        combo_lock {
+            bindings = <&tog 4>;
+            key-positions = <35 24>;
+        };
+
+        combo_release {
+            bindings = <&tog 0>;
+            key-positions = <11 23 0 12>;
         };
     };
 
@@ -56,6 +61,13 @@
             #binding-cells = <0>;
             bindings = <&lt 1 SPACE>, <&tog 1>;
         };
+
+        be_1or0: be_1or0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BE_1OR0";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_1>, <&kp NUMBER_0>;
+        };
     };
 
     keymap {
@@ -86,19 +98,19 @@
 
             display-name = "Lower";
             bindings = <
-&trans  &trans  &trans  &kp LG(A)  &trans     &trans       &macro_quote        &kp UP_ARROW  &macro_brackets  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3
-&trans  &trans  &trans  &kp LG(X)  &kp LG(C)  &kp LG(V)    &kp LEFT            &kp DOWN      &kp RIGHT        &kp NUMBER_4  &kp N5        &kp NUMBER_6
-&trans  &trans  &trans  &trans     &trans     &trans       &macro_parenthesis  &kp MINUS     &kp EQUAL        &kp N7        &kp N8        &kp N9
-                        &trans     &trans     &tog 0       &tog 0              &trans        &kp N0
+&trans  &trans  &trans      &kp C_VOLUME_UP   &kp LG(LS(NUMBER_4))  &kp LS(LG(NUMBER_3))    &macro_quote        &kp UP_ARROW  &macro_brackets  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9
+&trans  &trans  &kp K_PREV  &kp K_PLAY_PAUSE  &kp C_NEXT            &kp K_MUTE              &kp LEFT            &kp DOWN      &kp RIGHT        &kp NUMBER_4  &kp N5        &kp NUMBER_6
+&trans  &trans  &trans      &kp C_VOLUME_UP   &trans                &trans                  &macro_parenthesis  &kp MINUS     &kp EQUAL        &be_1or0      &kp NUMBER_2  &kp NUMBER_3
+                            &trans            &trans                &trans                  &trans              &trans        &trans
             >;
         };
 
         Raise {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans        &kp PAGE_UP  &trans         &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LA(LEFT)  &kp PAGE_UP  &kt LA(RIGHT)  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans       &trans         &trans  &trans  &trans
-                        &trans  &trans  &tog 0    &tog 0        &trans       &trans
+&trans  &trans  &trans  &trans          &msc SCROLL_UP    &trans             &trans        &kp PAGE_UP  &trans         &trans  &trans  &trans
+&trans  &trans  &trans  &mmv MOVE_LEFT  &mwh SCROLL_DOWN  &mmv MOVE_RIGHT    &kp LA(LEFT)  &kp PAGE_UP  &kt LA(RIGHT)  &trans  &trans  &trans
+&trans  &trans  &trans  &trans          &trans            &trans             &trans        &trans       &trans         &trans  &trans  &trans
+                        &trans          &trans            &trans             &trans        &trans       &trans
             >;
 
             label = "Raise";
@@ -106,11 +118,29 @@
 
         settings {
             bindings = <
-&bt BT_CLR             &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &sys_reset  &trans  &trans       &trans  &trans  &bt BT_CLR_ALL
-&kp C_AL_SCREEN_SAVER  &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans       &trans  &trans  &trans
-&kp A                  &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans       &trans  &trans  &trans
-                                                   &soft_off     &trans        &tog 0          &tog 0      &trans  &bootloader
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &sys_reset  &trans  &trans       &trans  &trans  &bt BT_CLR_ALL
+&kp B       &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans       &trans  &trans  &trans
+&kp A       &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans       &trans  &trans  &trans
+                                        &soft_off     &trans        &trans          &trans      &trans  &bootloader
             >;
+        };
+
+        lock {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        Co_Settings {
+            if-layers = <0 1>;
+            then-layer = <3>;
         };
     };
 };
