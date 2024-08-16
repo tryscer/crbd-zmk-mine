@@ -115,10 +115,10 @@
 
         Raise {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans        &kp PAGE_UP  &trans            &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LA(LEFT)  &kp PAGE_UP  &kt LA(RIGHT)     &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &mkp LCLK     &mkp RCLK    &kp LC(UP_ARROW)  &trans  &trans  &kp F11
-                        &trans  &trans  &trans    &trans        &trans       &trans
+&trans  &trans  &trans  &trans  &mwh SCROLL_UP  &trans    &trans        &kp PAGE_UP  &trans            &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans    &kp LA(LEFT)  &kp PAGE_UP  &kt LA(RIGHT)     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans    &mkp LCLK     &mkp RCLK    &kp LC(UP_ARROW)  &trans  &trans  &kp F11
+                        &trans  &trans          &trans    &trans        &trans       &trans
             >;
 
             label = "Raise";
