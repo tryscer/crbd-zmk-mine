@@ -95,10 +95,10 @@
 
             display-name = "Base";
             bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E             &kp R      &kp T          &kp Y        &kp U          &kp I                  &kp O    &kp P     &kp BACKSPACE
-&kp TAB     &kp A  &kp S  &kp D             &kp F      &kp G          &kp H        &kp J          &kp K                  &kp L    &kp SEMI  &kp SQT
-&kp MINUS   &kp Z  &kp X  &kp C             &kp V      &kp B          &kp N        &kp M          &kp COMMA              &kp DOT  &kp FSLH  &kp PLUS
-                          &kp LEFT_CONTROL  &kp GLOBE  &lt 2 ENTER    &lt 1 SPACE  &kp RIGHT_GUI  &kp RC(RG(RIGHT_ALT))
+&kp ESCAPE  &kp Q  &kp W  &kp E             &kp R                    &kp T          &kp Y        &kp U          &kp I                  &kp O    &kp P     &kp BACKSPACE
+&kp TAB     &kp A  &kp S  &kp D             &kp F                    &kp G          &kp H        &kp J          &kp K                  &kp L    &kp SEMI  &kp SQT
+&kp MINUS   &kp Z  &kp X  &kp C             &kp V                    &kp B          &kp N        &kp M          &kp COMMA              &kp DOT  &kp FSLH  &kp PLUS
+                          &kp LEFT_CONTROL  &mt LEFT_SHIFT CAPSLOCK  &lt 2 ENTER    &lt 1 SPACE  &kp RIGHT_GUI  &kp RC(RG(RIGHT_ALT))
             >;
         };
 
@@ -120,10 +120,10 @@
 
         Raise {
             bindings = <
-&trans  &trans  &trans                &kp LS(LG(BACKSLASH))  &kp LG(R)              &kp LS(LG(T))    &trans        &kp K_SCROLL_UP    &trans         &trans        &kp LC(UP_ARROW)  &trans
-&trans  &trans  &kp LG(LEFT_BRACKET)  &kp LG(L)              &kp LG(RIGHT_BRACKET)  &kp LG(W)        &kp LA(LEFT)  &sk RIGHT_SHIFT    &kt LA(RIGHT)  &kp LC(LEFT)  &kp F4            &kp LC(RIGHT)
-&trans  &trans  &trans                &kp LS(LG(R))          &trans                 &trans           &trans        &kp K_SCROLL_DOWN  &trans         &trans        &kp LC(DOWN)      &kp F11
-                                      &trans                 &trans                 &trans           &mo 1         &trans             &trans
+&trans  &trans  &trans                &kp LS(LG(BACKSLASH))  &kp LG(R)              &kp LS(LG(T))    &trans        &kp C_AC_SCROLL_UP  &trans         &trans        &kp LC(UP_ARROW)  &trans
+&trans  &trans  &kp LG(LEFT_BRACKET)  &kp LG(L)              &kp LG(RIGHT_BRACKET)  &kp LG(W)        &kp LA(LEFT)  &sk RIGHT_SHIFT     &kt LA(RIGHT)  &kp LC(LEFT)  &kp F4            &kp LC(RIGHT)
+&trans  &trans  &trans                &kp LS(LG(R))          &trans                 &trans           &trans        &kp K_SCROLL_DOWN   &trans         &trans        &kp LC(DOWN)      &kp F11
+                                      &trans                 &trans                 &trans           &mo 1         &trans              &trans
             >;
 
             label = "Raise";
