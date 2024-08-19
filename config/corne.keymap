@@ -122,7 +122,7 @@
             bindings = <
 &trans  &trans  &trans                &kp LS(LG(BACKSLASH))  &kp LG(R)              &kp LS(LG(T))    &trans        &kp K_SCROLL_UP    &trans         &trans        &kp LC(UP_ARROW)  &trans
 &trans  &trans  &kp LG(LEFT_BRACKET)  &kp LG(L)              &kp LG(RIGHT_BRACKET)  &kp LG(W)        &kp LA(LEFT)  &sk RIGHT_SHIFT    &kt LA(RIGHT)  &kp LC(LEFT)  &kp F4            &kp LC(RIGHT)
-&trans  &trans  &trans                &kp LS(LG(R))          &trans                 &trans           &trans        &kp K_SCROLL_DOWN  &trans         &trans        &kp LC(DOWN)      &trans
+&trans  &trans  &trans                &kp LS(LG(R))          &trans                 &trans           &trans        &kp K_SCROLL_DOWN  &trans         &trans        &kp LC(DOWN)      &kp F11
                                       &trans                 &trans                 &trans           &mo 1         &trans             &trans
             >;
 
