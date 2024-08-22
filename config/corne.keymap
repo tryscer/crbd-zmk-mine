@@ -22,11 +22,6 @@
             bindings = <&tog 0>;
             key-positions = <11 23 0 12>;
         };
-
-        macro_settings {
-            bindings = <&mo 3>;
-            key-positions = <39 38>;
-        };
     };
 
     macros {
@@ -134,7 +129,7 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &sys_reset  &trans  &trans  &trans  &trans  &bt BT_CLR_ALL
 &kp B       &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &bootloader
 &kp A       &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &kp LC(LG(Q))
-                                        &trans        &trans        &trans          &trans      &trans  &trans
+                                        &trans        &trans        &to 0           &to 0       &trans  &trans
             >;
         };
 
