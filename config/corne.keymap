@@ -107,7 +107,7 @@
             display-name = "Lower";
             bindings = <
 &kp LA(LC(LG(Q)))  &kp LA(LC(LG(T)))  &kp RA(RC(RG(A)))  &kp C_VOLUME_UP    &kp LG(LA(LC(D)))  &kp LS(LG(NUMBER_3))    &macro_quote        &kp UP_ARROW  &macro_brackets  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9
-&trans             &trans             &kp C_PREVIOUS     &kp C_PLAY_PAUSE   &kp C_NEXT         &kp K_MUTE              &kp LEFT            &kp DOWN      &kp RIGHT        &kp NUMBER_4  &kp N5        &kp NUMBER_6
+&kp LC(LA(LG(B)))  &trans             &kp C_PREVIOUS     &kp C_PLAY_PAUSE   &kp C_NEXT         &kp K_MUTE              &kp LEFT            &kp DOWN      &kp RIGHT        &kp NUMBER_4  &kp N5        &kp NUMBER_6
 &trans             &trans             &kp RA(RC(RG(S)))  &kp C_VOLUME_DOWN  &kp LA(LC(LG(P)))  &kp LS(LG(NUMBER_4))    &macro_parenthesis  &kp PIPE      &kp EQUAL        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3
                                                          &trans             &kp LG(SPACE)      &mo 3                   &trans              &trans        &kp NUMBER_0
             >;
@@ -115,10 +115,10 @@
 
         Raise {
             bindings = <
-&trans         &trans         &trans                &kp LS(LG(BACKSLASH))  &kp LG(R)              &kp LS(LG(T))        &trans        &kp PAGE_UP      &trans         &trans        &kp LC(UP_ARROW)  &trans
-&kp RC(RA(E))  &kp LA(LC(G))  &kp LG(LEFT_BRACKET)  &kp LG(L)              &kp LG(RIGHT_BRACKET)  &kp LG(W)            &kp LA(LEFT)  &sk RIGHT_SHIFT  &kt LA(RIGHT)  &kp LC(LEFT)  &kp F4            &kp LC(RIGHT)
-&trans         &trans         &trans                &kp LS(LG(R))          &trans                 &kp RC(RG(SPACE))    &trans        &kp PAGE_DOWN    &trans         &trans        &kp LC(DOWN)      &kp F11
-                                                    &trans                 &trans                 &trans               &mo 3         &trans           &trans
+&trans         &trans         &trans                &kp LS(LG(BACKSLASH))  &kp LG(R)              &kp LS(LG(T))    &trans        &kp PAGE_UP      &trans         &trans        &kp LC(UP_ARROW)    &trans
+&kp RC(RA(E))  &kp LA(LC(G))  &kp LG(LEFT_BRACKET)  &kp LG(L)              &kp LG(RIGHT_BRACKET)  &kp LG(W)        &kp LA(LEFT)  &sk RIGHT_SHIFT  &kt LA(RIGHT)  &kp LC(LEFT)  &kp RA(RC(RG(F4)))  &kp LC(RIGHT)
+&trans         &trans         &trans                &kp LS(LG(R))          &trans                 &trans           &trans        &kp PAGE_DOWN    &trans         &trans        &kp LC(DOWN)        &kp F11
+                                                    &trans                 &kp LC(LG(SPACE))      &trans           &mo 3         &trans           &trans
             >;
 
             label = "Raise";
@@ -128,7 +128,7 @@
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &sys_reset  &trans  &trans  &trans  &trans  &bt BT_CLR_ALL
 &trans      &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &bootloader
-&kp A       &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &kp LC(LG(Q))
+&trans      &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &kp LC(LG(Q))
                                         &trans        &trans        &to 0           &to 0       &trans  &trans
             >;
         };
