@@ -127,7 +127,7 @@
         settings {
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &sys_reset  &trans  &trans  &trans  &trans  &bt BT_CLR_ALL
-&tog 5      &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &bootloader
+&trans      &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &bootloader
 &kp A       &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &kp LC(LG(Q))
                                         &trans        &trans        &to 0           &to 0       &trans  &trans
             >;
@@ -139,15 +139,6 @@
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
                      &none  &none  &none    &none  &none  &none
-            >;
-        };
-
-        AlternateQWERTY {
-            bindings = <
-&trans  &kp GRAVE  &kp Q  &kp W   &kp E   &kp R     &kp T   &kp Y   &kp U   &kp I      &kp O    &kp P
-&to 0   &kp LGUI   &kp A  &kp S   &kp D   &kp F     &kp G   &kp H   &kp J   &kp K      &kp L    &kp SEMI
-&trans  &kp SLASH  &kp Z  &kp X   &kp C   &kp V     &kp B   &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH
-                          &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
