@@ -14,12 +14,12 @@
         compatible = "zmk,combos";
 
         combo_lock {
-            bindings = <&tog 4>;
+            bindings = <&to 4>;
             key-positions = <35 24>;
         };
 
         combo_release {
-            bindings = <&tog 0>;
+            bindings = <&to 0>;
             key-positions = <11 23 0 12>;
         };
     };
