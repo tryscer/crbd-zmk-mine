@@ -117,7 +117,7 @@
             bindings = <
 &trans         &trans         &trans                &kp LS(LG(BACKSLASH))  &kp LG(R)              &kp LS(LG(T))    &trans        &kp PAGE_UP        &trans             &trans        &kp LC(UP_ARROW)    &trans
 &kp RC(RA(E))  &kp LA(LC(G))  &kp LG(LEFT_BRACKET)  &kp LG(L)              &kp LG(RIGHT_BRACKET)  &kp LG(W)        &kp LA(LEFT)  &kp PAGE_DOWN      &kt LA(RIGHT)      &kp LC(LEFT)  &kp RA(RC(RG(F4)))  &kp LC(RIGHT)
-&trans         &trans         &trans                &kp LS(LG(R))          &kp LA(LG(N))          &trans           &trans        &sk RIGHT_SHIFT    &trans             &trans        &kp LC(DOWN)        &kp F11
+&trans         &trans         &trans                &kp LS(LG(R))          &trans                 &kp LG(T)        &trans        &sk RIGHT_SHIFT    &trans             &trans        &kp LC(DOWN)        &kp F11
                                                     &trans                 &kp LC(LG(SPACE))      &trans           &mo 3         &kp RS(RG(SPACE))  &kp LA(LC(LG(X)))
             >;
 
