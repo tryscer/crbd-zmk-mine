@@ -131,6 +131,8 @@
 &trans      &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &kp LC(LG(Q))
                                         &trans        &trans        &to 0           &to 0       &trans  &trans
             >;
+
+            label = "Settings";
         };
 
         lock {
@@ -140,6 +142,8 @@
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
                      &none  &none  &none    &none  &none  &none
             >;
+
+            label = "LOCKED";
         };
     };
 
