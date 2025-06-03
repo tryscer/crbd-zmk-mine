@@ -83,9 +83,9 @@
 
         Raise {
             bindings = <
-&trans  &trans  &trans  &trans  &trans             &trans    &kp RC(UP_ARROW)      &trans                 &trans             &trans        &trans    &trans
-&trans  &trans  &trans  &trans  &trans             &trans    &kp LA(LEFT)          &trans                 &kt LA(RIGHT)      &kp LC(LEFT)  &trans    &kp LC(RIGHT)
-&trans  &trans  &trans  &trans  &trans             &trans    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCL           &kp AT_SIGN   &kp HASH  &kp ASTRK
+&trans  &trans  &trans  &trans  &trans             &trans    &trans                &trans                 &trans             &trans       &trans    &trans
+&trans  &trans  &trans  &trans  &trans             &trans    &kp LA(LEFT)          &trans                 &kp LA(RIGHT)      &trans       &trans    &trans
+&trans  &trans  &trans  &trans  &trans             &trans    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCL           &kp AT_SIGN  &kp HASH  &kp ASTRK
                         &trans  &kp LC(LG(SPACE))  &trans    &mo 3                 &kp RS(RG(SPACE))      &kp LA(LC(LG(X)))
             >;
 
@@ -94,10 +94,10 @@
 
         system {
             bindings = <
-&trans            &trans             &trans  &trans  &trans  &trans    &kp C_PLAY_PAUSE          &kp C_VOLUME_UP       &kp C_MUTE     &trans        &trans        &bt BT_CLR_ALL
-&kp LC(LA(E))     &kp LC(LA(G))      &trans  &trans  &trans  &trans    &kp C_PREV                &kp C_VOLUME_DOWN     &kp C_NEXT     &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&kp LC(LA(LEFT))  &kp LC(LA(RIGHT))  &trans  &trans  &trans  &trans    &kp LC(LS(LG(NUMBER_4)))  &kp LS(LG(NUMBER_3))  &trans         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2
-                                             &trans  &trans  &trans    &trans                    &trans                &kp LC(LG(Q))
+&kp LA(LEFT_ARROW)  &kp LA(RIGHT)      &trans  &trans  &trans  &kp LC(UP_ARROW)    &kp C_PLAY_PAUSE          &kp C_VOLUME_UP       &kp C_MUTE     &trans        &trans        &bt BT_CLR_ALL
+&kp LC(LA(E))       &kp LC(LA(G))      &trans  &trans  &trans  &trans              &kp C_PREV                &kp C_VOLUME_DOWN     &kp C_NEXT     &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&kp LC(LA(LEFT))    &kp LC(LA(RIGHT))  &trans  &trans  &trans  &trans              &kp LC(LS(LG(NUMBER_4)))  &kp LS(LG(NUMBER_3))  &trans         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2
+                                               &trans  &trans  &trans              &trans                    &trans                &kp LC(LG(Q))
             >;
 
             label = "system";
