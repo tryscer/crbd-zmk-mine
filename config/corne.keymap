@@ -83,10 +83,10 @@
 
         Raise {
             bindings = <
-&trans  &trans  &trans  &trans  &trans             &trans    &trans                &trans                 &trans             &trans       &trans    &trans
-&trans  &trans  &trans  &trans  &trans             &trans    &kp LA(LEFT)          &trans                 &kp LA(RIGHT)      &trans       &trans    &trans
-&trans  &trans  &trans  &trans  &trans             &trans    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCL           &kp AT_SIGN  &kp HASH  &kp ASTRK
-                        &trans  &kp LC(LG(SPACE))  &trans    &mo 3                 &kp RS(RG(SPACE))      &kp LA(LC(LG(X)))
+&trans  &trans  &trans                &kp LG(LS(BACKSLASH))  &trans                 &trans    &trans                &trans                 &trans             &trans       &trans    &trans
+&trans  &trans  &kp LG(LEFT_BRACKET)  &kp LG(L)              &kp LG(RIGHT_BRACKET)  &trans    &kp LA(LEFT)          &trans                 &kp LA(RIGHT)      &trans       &trans    &trans
+&trans  &trans  &trans                &trans                 &trans                 &trans    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCL           &kp AT_SIGN  &kp HASH  &kp ASTRK
+                                      &trans                 &kp LC(LG(SPACE))      &trans    &mo 3                 &kp RS(RG(SPACE))      &kp LA(LC(LG(X)))
             >;
 
             label = "Raise";
