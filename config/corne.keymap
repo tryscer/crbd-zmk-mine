@@ -44,37 +44,6 @@
             bindings = <&kp DOUBLE_QUOTES &kp DOUBLE_QUOTES &kp LEFT>;
             label = "MACRO_QUOTES";
         };
-
-        macro_emoji: macro_emoji {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp E>, <&macro_press>;
-
-            label = "MACRO_EMOJI";
-        };
-    };
-
-    behaviors {
-        be_command: be_command {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BE_COMMAND";
-            #binding-cells = <0>;
-            bindings = <&lt 2 ENTER>, <&tog 2>;
-        };
-
-        be_control: be_control {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BE_CONTROL";
-            #binding-cells = <0>;
-            bindings = <&lt 1 SPACE>, <&tog 1>;
-        };
-
-        be_1or0: be_1or0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BE_1OR0";
-            #binding-cells = <0>;
-            bindings = <&kp NUMBER_1>, <&kp NUMBER_0>;
-        };
     };
 
     keymap {
@@ -89,10 +58,10 @@
 
             display-name = "Base";
             bindings = <
-&kp MINUS      &kp Q  &kp W  &kp E    &kp R                    &kp T          &kp Y        &kp U                   &kp I       &kp O       &kp P     &kp EQUAL
-&kp BACKSLASH  &kp A  &kp S  &kp D    &kp F                    &kp G          &kp H        &kp J                   &kp K       &kp L       &kp SEMI  &kp SQT
-&kp GRAVE      &kp Z  &kp X  &kp C    &kp V                    &kp B          &kp N        &kp M                   &kp COMMA   &kp PERIOD  &kp FSLH  &kp N0
-                             &kp TAB  &mt LEFT_SHIFT CAPSLOCK  &lt 2 ENTER    &lt 1 SPACE  &mt LEFT_GUI BACKSPACE  &kp ESCAPE
+&kp MINUS      &kp Q  &kp W  &kp E                 &kp R                    &kp T          &kp Y        &kp U                   &kp I                 &kp O       &kp P     &kp EQUAL
+&kp BACKSLASH  &kp A  &kp S  &kp D                 &kp F                    &kp G          &kp H        &kp J                   &kp K                 &kp L       &kp SEMI  &kp SQT
+&kp GRAVE      &kp Z  &kp X  &kp C                 &kp V                    &kp B          &kp N        &kp M                   &kp COMMA             &kp PERIOD  &kp FSLH  &kp N0
+                             &mt LEFT_CONTROL TAB  &mt LEFT_SHIFT CAPSLOCK  &lt 2 ENTER    &lt 1 SPACE  &mt LEFT_GUI BACKSPACE  &mt RIGHT_ALT ESCAPE
             >;
         };
 
@@ -105,33 +74,33 @@
 
             display-name = "Lower";
             bindings = <
-&trans  &trans  &trans          &kp C_VOLUME_UP    &trans         &kp LS(LG(NUMBER_3))    &trans                &kp UP_ARROW           &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9
-&trans  &trans  &kp C_PREVIOUS  &kp C_PLAY_PAUSE   &kp C_NEXT     &kp K_MUTE              &kp LEFT              &kp DOWN               &kp RIGHT     &kp NUMBER_4  &kp N5        &kp NUMBER_6
-&trans  &trans  &trans          &kp C_VOLUME_DOWN  &trans         &kp LS(LG(NUMBER_4))    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3
-                                &trans             &kp LG(SPACE)  &mo 3                   &trans                &kp DELETE             &kp NUMBER_0
+&trans  &trans  &trans  &trans  &trans         &trans    &kp HOME  &kp UP_ARROW  &kp PAGE_UP    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9
+&trans  &trans  &trans  &trans  &trans         &trans    &kp LEFT  &kp DOWN      &kp RIGHT      &kp NUMBER_4  &kp N5        &kp NUMBER_6
+&trans  &trans  &trans  &trans  &trans         &trans    &kp END   &trans        &kp PAGE_DOWN  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3
+                        &trans  &kp LG(SPACE)  &mo 3     &trans    &kp DELETE    &trans
             >;
         };
 
         Raise {
             bindings = <
-&trans         &trans         &trans  &trans  &trans             &trans    &trans        &kp PAGE_UP        &trans             &trans        &kp LC(UP_ARROW)    &trans
-&kp RC(RA(E))  &kp LA(LC(G))  &trans  &trans  &trans             &trans    &kp LA(LEFT)  &kp PAGE_DOWN      &kt LA(RIGHT)      &kp LC(LEFT)  &kp RA(RC(RG(F4)))  &kp LC(RIGHT)
-&trans         &trans         &trans  &trans  &trans             &trans    &trans        &trans             &trans             &trans        &kp LC(DOWN)        &kp F11
-                                      &trans  &kp LC(LG(SPACE))  &trans    &mo 3         &kp RS(RG(SPACE))  &kp LA(LC(LG(X)))
+&trans  &trans  &trans  &trans  &trans             &trans    &kp RC(UP_ARROW)      &trans                 &trans             &trans        &trans    &trans
+&trans  &trans  &trans  &trans  &trans             &trans    &kp LA(LEFT)          &trans                 &kt LA(RIGHT)      &kp LC(LEFT)  &trans    &kp LC(RIGHT)
+&trans  &trans  &trans  &trans  &trans             &trans    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCL           &kp AT_SIGN   &kp HASH  &kp ASTRK
+                        &trans  &kp LC(LG(SPACE))  &trans    &mo 3                 &kp RS(RG(SPACE))      &kp LA(LC(LG(X)))
             >;
 
             label = "Raise";
         };
 
-        settings {
+        system {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &sys_reset  &trans  &trans  &trans  &trans  &bt BT_CLR_ALL
-&trans      &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &bootloader
-&trans      &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &kp LC(LG(Q))
-                                        &trans        &trans        &to 0           &to 0       &trans  &trans
+&trans            &trans             &trans  &trans  &trans  &trans    &kp C_PLAY_PAUSE          &kp C_VOLUME_UP       &kp C_MUTE     &trans        &trans        &bt BT_CLR_ALL
+&kp LC(LA(E))     &kp LC(LA(G))      &trans  &trans  &trans  &trans    &kp C_PREV                &kp C_VOLUME_DOWN     &kp C_NEXT     &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&kp LC(LA(LEFT))  &kp LC(LA(RIGHT))  &trans  &trans  &trans  &trans    &kp LC(LS(LG(NUMBER_4)))  &kp LS(LG(NUMBER_3))  &trans         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2
+                                             &trans  &trans  &trans    &trans                    &trans                &kp LC(LG(Q))
             >;
 
-            label = "Settings";
+            label = "system";
         };
 
         lock {
